@@ -1,0 +1,59 @@
+# Changes and migration of version 6.4.1
+
+**Release Train**
+
+Following are the artefacts of this release:
+
+* **Decisyon App Composer for Docker** \
+  decisyon-dac-docker-prod.jfrog.io/com.decisyon.appcomposer-docker:KATY.1.RELEASE
+* **Decisyon App Composer for Kubernetes**\
+  decisyon-dac-docker-prod.jfrog.io/com.decisyon.appcomposer-k8s:KATY.1.RELEASE
+* **Cornelius Configuration Server**\
+  decisyon-dac-docker-prod.jfrog.io/com.decisyon.cornelius:KATY.1.RELEASE
+* **Keycloak OIDC Server**\
+  decisyon-dac-docker-prod.jfrog.io/com.decisyon.keycloak:KATY.1.RELEASE
+* **Gertrude Flowable Back-end**\
+  decisyon-dac-docker-prod.jfrog.io/com.decisyon.gertrude:KATY.1.RELEASE
+* **Flowable Modeler**\
+  decisyon-dac-docker-prod.jfrog.io/com.decisyon.flowable-modeler:KATY.1.RELEASE
+* **Decisyon Design Studio**\
+  http://repository.decisyon.com/public/dac-designstudio/release/katy1
+
+**Configurable properties**
+
+Following are the properties that need to be defined as environment variables to configure DAC properties:
+
+| Property​                                      | Description                                                                     | Mandatory                                                                                                                                                |
+| ---------------------------------------------- | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **GENERAL SETTINGS**                           |                                                                                 |                                                                                                                                                          |
+| spring.profiles.active                         | Enables DAC features                                                            | YES: set its value to “prod”. You need to add “cornelius” if you want to use the configuration server. For example spring.profiles.active=prod,cornelius |
+| **HTTP SETTINGS​**                             |                                                                                 |                                                                                                                                                          |
+| server.https.enabled                           | Enables https                                                                   | NO: default value is false                                                                                                                               |
+| server.http2.enabled                           | Enables http2                                                                   | NO: default value is false                                                                                                                               |
+|                                                |                                                                                 |                                                                                                                                                          |
+| **METADATA DATASOURCE​**                       |                                                                                 |                                                                                                                                                          |
+| service.metadata.name                          | Name of the metadata service                                                    | YES: its value must be “metadata”                                                                                                                        |
+| metadata.user                                  | Specify user to use to authenticate to the database                             | YES                                                                                                                                                      |
+| metadata.password                              | Password                                                                        | YES                                                                                                                                                      |
+| metadata.database                              | Database name                                                                   | YES                                                                                                                                                      |
+| metadata.schema                                | Specify name of the schema to use for Postgres                                  | This value is mandatory only if use Postgres                                                                                                             |
+| metadata.port                                  | Specify port of the database                                                    | YES                                                                                                                                                      |
+| metadata.host                                  | Specify hostname of the database                                                | YES                                                                                                                                                      |
+| metadata.url                                   | Specify jdbc connection url of the database.                                    | YES                                                                                                                                                      |
+| metadata.minIdle                               |                                                                                 | NO: default value is 5                                                                                                                                   |
+| metadata.maxPoolSize                           | Maximum pool size                                                               | NO: default value is 100                                                                                                                                 |
+| metadata.idleTimeout                           | Maximum idle time for connection                                                | NO: default value is 300000                                                                                                                              |
+| metadata.connectionTimeout                     | Maximum number of milliseconds that a client will wait for a connection         | NO: default value is 600000                                                                                                                              |
+| metadata.maxLifeTime                           | Maximum lifetime in milliseconds of a connection in the pool after it is closed | NO: default value is 600000                                                                                                                              |
+|                                                |                                                                                 |                                                                                                                                                          |
+| **SECURITY EXTENSIONS​**                       |                                                                                 |                                                                                                                                                          |
+| appcomposer.caramel.enabled                    | Enables the support for Caramel                                                 | NO: default value is false, set it to true if use Caramel.                                                                                               |
+| appcomposer.keycloak.enabled                   | Enables the support for Keycloak                                                | NO: default value is false, set it to true if use Keycloak.                                                                                              |
+| uaa.url                                        | User Management Endpoint                                                        | This value is mandatory if you use Keycloak or Caramel.                                                                                                  |
+| appcomposer.azure.security.starter.enabled     | Enables support for Azure AD                                                    | NO: default value is false, set it to true if use Azure AD.                                                                                              |
+| appcomposer.schneider.security.starter.enabled | Enables support for Schneider IDMS                                              | NO: default value is false, set it to true if use Schenider IDMS.                                                                                        |
+|                                                |                                                                                 |                                                                                                                                                          |
+| **WORKFLOW**                                   |                                                                                 |                                                                                                                                                          |
+| appcomposer.workflow.enabled                   | Enable the workflow capabilities of DAC                                         | NO: default value is false, set it to true if use the workflow                                                                                           |
+| flowable.task.url                              | Gertrude url                                                                    | This is mandatory if you use the workflow                                                                                                                |
+| flowable.modeler.url                           | Flowable Modeler url                                                            | This is mandatory if you use the workflow                                                                                                                |
