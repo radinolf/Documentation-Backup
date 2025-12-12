@@ -1,0 +1,16 @@
+# ⛔ Deploy to Platform
+
+{% hint style="danger" %}
+This feature has been deprecated and it will be removed in a later version. Please refer to the changelog for additional information.
+{% endhint %}
+
+## Deploy to Platform
+
+Choose the platform on which to create and deploy the DAC and the micro-services associated.
+
+![](<../../.gitbook/assets/image (423).png>)
+
+Select which micro-services to deploy with the DAC. Some micro-services are mandator, while others are optional. For each type of micro-services, a list of configurations available for deployment is provided. Ti create or modify a configuration go to the Server & Services section under the Cloud menu.
+
+![](<../../.gitbook/assets/image (60).png>)
+
