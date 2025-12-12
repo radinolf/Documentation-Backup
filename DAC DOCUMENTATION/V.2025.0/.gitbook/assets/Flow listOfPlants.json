@@ -1,0 +1,75 @@
+[
+    {
+        "id": "a539db0242f5688e",
+        "type": "tab",
+        "label": "ListOfPlant",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e19a1cd9ccdbf8c0",
+        "type": "template",
+        "z": "a539db0242f5688e",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{ \"rows\": [\n            {\n                \"Plant_code\": \"Rome\",\n                \"description\": \"Rome\",\n                \"Latitude\": \"41.902800\",\n                \"Longitude\":\"12.496400\",\n\t\t\t\t\"Timezone\":\"Europe/Rome\",\n                \"active\": 1 \n            },\n            {\n                \"Plant_code\": \"Hannover\",\n                \"description\": \"Hannover\",\n                \"Latitude\": \"52.373920\",\n                \"Longitude\": \"9.735603\",\n\t\t\t\t\"Timezone\":\"Europe/Berlin\",\n                \"active\": 1 \n            },\n\t\t    {\n                \"Plant_code\": \"Madrid\",\n                \"description\": \"Madrid\",\n                \"Latitude\": \"40.416705\",\n                \"Longitude\":\"-3.703800\",\n\t\t\t\t\"Timezone\":\"Europe/Madrid\",\n                \"active\": 1 \n            },\n\t\t   {\n                \"Plant_code\": \"Brussels\",\n                \"description\": \"Brussels\",\n                \"Latitude\": \"50.847600\",\n                \"Longitude\": \"4.357200\",\n\t\t\t\t\"Timezone\":\"Europe/Brussels\",\n                \"active\": 0\n            }\n\t\t\t\n\t\t]\t\n}",
+        "output": "json",
+        "x": 640,
+        "y": 400,
+        "wires": [
+            [
+                "9fb38fdf2956e9f5"
+            ]
+        ]
+    },
+    {
+        "id": "b34d8c10d60c4c67",
+        "type": "debug",
+        "z": "a539db0242f5688e",
+        "name": "debug listOfPlant",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "9fb38fdf2956e9f5",
+        "type": "http response",
+        "z": "a539db0242f5688e",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 890,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "8ce7f718fefc40c7",
+        "type": "http in",
+        "z": "a539db0242f5688e",
+        "name": "",
+        "url": "listOfPlant",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 400,
+        "y": 360,
+        "wires": [
+            [
+                "b34d8c10d60c4c67",
+                "e19a1cd9ccdbf8c0"
+            ]
+        ]
+    }
+]

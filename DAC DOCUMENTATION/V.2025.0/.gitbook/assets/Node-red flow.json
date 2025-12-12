@@ -1,0 +1,214 @@
+[
+    {
+        "id": "fde76b891d9083bf",
+        "type": "tab",
+        "label": "SelectData (Basic Auth)",
+        "disabled": false,
+        "info": "Select the data from the postgres table and provide the rows in a JSON\r\ncoming from the query statement (basic authentication)",
+        "env": []
+    },
+    {
+        "id": "477aa7709ee0ac99",
+        "type": "postgresql",
+        "z": "fde76b891d9083bf",
+        "name": "",
+        "query": "select \nplant_code,\nseries, \nseries_id,\ndatetime,\nvalue from losses_data.\"test_read_data_from nodered\" where plant_code='{{{msg.plant}}}';",
+        "postgreSQLConfig": "c24ec18a48b708af",
+        "split": false,
+        "rowsPerMsg": "1",
+        "outputs": 1,
+        "x": 870,
+        "y": 360,
+        "wires": [
+            [
+                "f977ab46ac99dbe6"
+            ]
+        ]
+    },
+    {
+        "id": "a822396e92496eaf",
+        "type": "debug",
+        "z": "fde76b891d9083bf",
+        "name": "debug 48",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "req.params",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "739b79ee7f0902bd",
+        "type": "http response",
+        "z": "fde76b891d9083bf",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1350,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "d1d3cd0ca4e5949f",
+        "type": "function",
+        "z": "fde76b891d9083bf",
+        "name": "function 24",
+        "func": "//msg.plant = msg.req.params.plant;\nmsg.plant = msg.req.query.plant;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 320,
+        "wires": [
+            [
+                "50c3ce0535f1e8e7",
+                "477aa7709ee0ac99"
+            ]
+        ]
+    },
+    {
+        "id": "50c3ce0535f1e8e7",
+        "type": "debug",
+        "z": "fde76b891d9083bf",
+        "name": "debug 49",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "plant",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "f977ab46ac99dbe6",
+        "type": "template",
+        "z": "fde76b891d9083bf",
+        "name": "",
+        "field": "plant",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n    \n}",
+        "output": "json",
+        "x": 1140,
+        "y": 360,
+        "wires": [
+            [
+                "739b79ee7f0902bd"
+            ]
+        ]
+    },
+    {
+        "id": "014d790dee35da6e",
+        "type": "http in",
+        "z": "fde76b891d9083bf",
+        "name": "",
+        "url": "energyData",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 240,
+        "wires": [
+            [
+                "a822396e92496eaf",
+                "29875f152729b10c"
+            ]
+        ]
+    },
+    {
+        "id": "29875f152729b10c",
+        "type": "node-red-contrib-basicauth",
+        "z": "fde76b891d9083bf",
+        "name": "Basic auth",
+        "realm": "test",
+        "username": "User_test",
+        "password": "m1_passw0rd",
+        "x": 370,
+        "y": 380,
+        "wires": [
+            [
+                "d1d3cd0ca4e5949f",
+                "1ce453315d976189"
+            ],
+            [
+                "b5b61f6fc820c9a6"
+            ]
+        ],
+        "outputLabels": [
+            "ok",
+            "ko"
+        ]
+    },
+    {
+        "id": "b5b61f6fc820c9a6",
+        "type": "debug",
+        "z": "fde76b891d9083bf",
+        "name": "debug KO",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "ipAddress",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "1ce453315d976189",
+        "type": "debug",
+        "z": "fde76b891d9083bf",
+        "name": "debug 51",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "c24ec18a48b708af",
+        "type": "postgreSQLConfig",
+        "name": "training",
+        "host": "10.0.40.211",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "dac_training_soumith",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "D3c1sy0n,1",
+        "passwordFieldType": "str"
+    }
+]
