@@ -1,0 +1,3 @@
+# Fix Defect
+
+<table><thead><tr><th>Activity ID</th><th width="275.3333333333333">Description</th><th>Solution</th></tr></thead><tbody><tr><td>D4C-8493 </td><td>An Authenticated Vertical Privilege Escalation security issue has been identified in App Composer, allowing malicious user to access the administration section and perform perform admin action.</td><td>The Authenticated Vertical Privilege Escalation is prevented</td></tr><tr><td>D4C-8722</td><td>User with scope "User administrator" is not able to persist changes applied to other users.</td><td>Now the User with scope "User administrator" is able to persist changes applied to other users.</td></tr></tbody></table>

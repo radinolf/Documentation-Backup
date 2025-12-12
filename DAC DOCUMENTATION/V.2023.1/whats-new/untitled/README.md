@@ -1,0 +1,43 @@
+# Change Log
+
+The Change Log' is a document distributed together with the release of a new version (minor release or patch) of the Decisyon App Composer Platform and is prepared as a log of solved bugs and of the functions entered in the Platform.
+
+## Version 2023.1.0
+
+<table data-view="cards"><thead><tr><th>Version</th><th>Release Date</th></tr></thead><tbody><tr><td><a href="version-2023.1.2/">2023.1.2 </a>(patch)</td><td>Jul, 23, 2023</td></tr><tr><td><a href="version-2023.1.1/">2023.1.1 </a>(patch)</td><td>Jul, 024, 2023</td></tr><tr><td><a href="./#version-2023.1.0">2023.1.0 </a></td><td>Jun ,05, 2023</td></tr></tbody></table>
+
+## Version  2023.0.0
+
+<table data-view="cards"><thead><tr><th>Version</th><th>Release Date</th></tr></thead><tbody><tr><td><a href="./#version-2023.0.0">2023.0.0 </a></td><td>May<em>,</em> 23,  2023</td></tr></tbody></table>
+
+## Version 2022.2
+
+<table data-view="cards"><thead><tr><th>Version</th><th>Release Date</th></tr></thead><tbody><tr><td><a href="/broken/pages/EqiRwhcNOi4ZQsvy2ghD">2022.2.1</a> (patch)</td><td>Nov 17, 2022</td></tr><tr><td><a href="/broken/pages/NpVqbbFXOEBD5LApIrgb">2022.2.0</a></td><td>Nov 04,2022</td></tr></tbody></table>
+
+## Version 2022.1
+
+<table data-view="cards"><thead><tr><th>Version</th><th>Release Date</th><th data-type="users" data-multiple></th></tr></thead><tbody><tr><td><a href="version-2022.1.0/version-2022.1.4.md">2022.1.4</a></td><td>Oct 05,2022</td><td></td></tr><tr><td><a href="version-2021.3.0/">2022.1.3</a></td><td>Sept 21,2022</td><td></td></tr><tr><td><a href="version-2022.1.0/version-2022.1.2.md">2022.1.2</a></td><td>Jul 20, 2022</td><td></td></tr><tr><td><a href="version-2022.1.0/version-2022.1.1.md">2022.1.1</a></td><td>May 16,2022</td><td></td></tr><tr><td><a href="version-2022.1.0/">2022.1.0</a></td><td>Apr 20,2022</td><td></td></tr></tbody></table>
+
+## Version 2022.0
+
+<table data-view="cards"><thead><tr><th>Version</th><th>Release Date</th></tr></thead><tbody><tr><td><a href="version-2022.0.0/">2022.0.0</a></td><td>Jeb 07, 2022</td></tr><tr><td></td><td></td></tr></tbody></table>
+
+## Version 2021.3
+
+<table data-view="cards"><thead><tr><th>Version</th><th>Release Date</th></tr></thead><tbody><tr><td><a href="version-2022.1.0/version-2022.1.4.md">2021.3.4</a></td><td>Oct 04,2021</td></tr><tr><td><a href="version-2021.3.0/#2021.2.6-patch-dec-30-2021">2021.3.3</a></td><td>Dec 30, 2021</td></tr><tr><td><a href="version-2021.3.0/#2021.3.2-patch-dec-15-2021">2021.3.2</a></td><td>Dec 15, 2021</td></tr><tr><td><a href="version-2021.3.0/#2021.3.1-patch">2021.3.1</a></td><td>Nov 16, 2021</td></tr><tr><td><a href="version-2021.3.0/">2021.3.0</a></td><td>Oct 26, 2021</td></tr></tbody></table>
+
+## Version 2021.2
+
+<table data-view="cards"><thead><tr><th>Version</th><th>Release Date</th></tr></thead><tbody><tr><td><a href="version-2021.2/#2021.2.6-patch">2021.2.6</a></td><td>Dec 30, 2021</td></tr><tr><td><a href="version-2021.2/#2021.2.5-patch">2021.2.5</a></td><td>Nov 10, 2021</td></tr><tr><td><a href="version-2021.2/#2021.2.4-patch">2021.2.4</a></td><td>Oct 18, 2021</td></tr><tr><td><a href="version-2021.2/#2021.2.3-patch">2021.2.3</a></td><td>Sept 13, 2021</td></tr><tr><td><a href="version-2021.2/#2021.2.2">2021.2.2</a></td><td>Aug 09, 2021</td></tr><tr><td><a href="version-2021.2/#2021.2.1">2021.2.1</a></td><td>Jul 21, 2021</td></tr><tr><td><a href="version-2021.2/">2021.2.0</a></td><td>June 30, 2021</td></tr></tbody></table>
+
+## Version 2021.1
+
+<table data-view="cards"><thead><tr><th>Version</th><th>Release Date</th></tr></thead><tbody><tr><td><a href="version-2021.1/">2021.1.1</a></td><td>May 21,2021</td></tr><tr><td><a href="version-2022.1.0/migration-notes-2022.1.0/#version-2022.1.0">2021.1.0</a></td><td>Apr 12,2021</td></tr></tbody></table>
+
+##
+
+## Version 6.x.x
+
+
+
+<table data-view="cards"><thead><tr><th>Version</th><th>Release Date</th></tr></thead><tbody><tr><td>​<a href="https://documentation.decisyon.com/change-log/untitled/version-6.7">6.7.3</a>​</td><td>Feb 23,2021</td></tr><tr><td>​<a href="https://documentation.decisyon.com/change-log/untitled/version-6.6">6.6.2</a></td><td>Jan 18,2021</td></tr><tr><td><a href="https://documentation.decisyon.com/change-log/untitled/version-6.5">6.5.2</a>​</td><td>Nov 02,2020</td></tr><tr><td>​<a href="https://documentation.decisyon.com/change-log/untitled/version-6.4">6.4.1</a>​</td><td>Jul 01,2020​</td></tr><tr><td><a href="https://documentation.decisyon.com/change-log/untitled/version-6.3">6.3.0</a>​</td><td>May 19,2020</td></tr></tbody></table>
